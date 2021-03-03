@@ -143,9 +143,9 @@
 										</ul>
 									</div>
 								</div>
-								@if(session('message'))
+								@if(Session::has('message'))
 								<div class="alert alert-success text-center">
-									{{ session('message') }}
+									{{ Session::get('message') }}
 								</div>
 									@endif
 								<form method="get" action="{{url('/form')}}">
