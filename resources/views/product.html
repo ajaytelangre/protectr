@@ -15,9 +15,9 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700%7CLato:300,400,700' rel='stylesheet' type='text/css'>
 	
 	<!-- Css -->
-	<link rel="stylesheet" href="{{asset('css/core.min.css')}}" />
+	<link rel="stylesheet" href="css/core.min.css" />
+	<link rel="stylesheet" href="css/skin.css" />
 
-	<link rel="stylesheet" href="{{asset('css/skin.css')}}" />
 </head>
 <body class="shop single-product">
 
@@ -35,13 +35,13 @@
 				<nav class="side-navigation">
 					<ul>
 						<li>
-							<a href="index.html" class="contains-sub-menu current">Home</a>
+							<a href="{{url('/')}}" class="contains-sub-menu current">Home</a>
 						</li>
 						<li>
-							<a href="policy.html" class="contains-sub-menu ">Policy</a>
+							<a href="{{url('/policy')}}" class="contains-sub-menu ">Policy</a>
 						</li>
 						<li>
-							<a href="contact.html" class="contains-sub-menu">Contact Us</a>
+							<a href="{{url('/contact')}}" class="contains-sub-menu">Contact Us</a>
 						</li>
 					</ul>
 				</nav>
@@ -75,13 +75,13 @@
 							<nav class="navigation nav-block primary-navigation nav-right">
 								<ul>	
 									<li>
-										<a href="index.html" class="contains-sub-menu current">Home</a>
+										<a href="{{url('/')}}" class="contains-sub-menu current">Home</a>
 									</li>
 									<li>
-										<a href="policy.html" class="contains-sub-menu ">Policy</a>
+										<a href="{{url('/policy')}}" class="contains-sub-menu ">Policy</a>
 									</li>
 									<li>
-										<a href="contact.html" class="contains-sub-menu">Contact Us</a>
+										<a href="{{url('/contact')}}" class="contains-sub-menu">Contact Us</a>
 									</li>
 								</ul>
 							</nav>
@@ -143,12 +143,19 @@
 										</ul>
 									</div>
 								</div>
+								@if(Session::has('message'))
+								<div class="alert alert-success text-center">
+									{{ Session::get('message') }}
+								</div>
+									@endif
+								<form method="get" action="{{url('/form')}}">
+									@csrf
 								<div class="product-cart">
 									<label>Quantity</label>
 									<input type="number" step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="form-element quantity" size="4">
-									<a href="{{url('/checkout')}}"><button class="button add-to-cart-button" >Add To Cart</button></a>
+									<button type="submit" class="button add-to-cart-button" >Add To Cart</button>
 								</div>
-								
+								</form>
 								<hr>
 								<div class="product-meta">
 									<span class="sku-container">The PROTECTR Advantage: </span>
@@ -197,6 +204,6 @@
 
 	<!-- Js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="{{asset('js/timber.master.min.js')}}"></script>
+	<script src="js/timber.master.min.js"></script>
 </body>
 </html>

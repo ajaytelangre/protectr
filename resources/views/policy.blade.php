@@ -34,13 +34,13 @@
 				<nav class="side-navigation nav-block">
 					<ul>
 						<li>
-							<a href="index.html" class="contains-sub-menu">Home</a>
+							<a href="{{url('/')}}" class="contains-sub-menu">Home</a>
 						</li>
 						<li>
-							<a href="policy.html" class="contains-sub-menu current">Policy</a>
+							<a href="{{url('/policy')}}" class="contains-sub-menu current">Policy</a>
 						</li>
 						<li>
-							<a href="contact.html" class="contains-sub-menu">Contact Us</a>
+							<a href="{{url('/contact')}}" class="contains-sub-menu">Contact Us</a>
 						</li>
 					</ul>
 				</nav>
@@ -70,13 +70,13 @@
 							<nav class="navigation nav-block primary-navigation nav-right">
 								<ul>
 									<li>
-										<a href="index.html" class="contains-sub-menu">Home</a>
+										<a href="{{url('/')}}" class="contains-sub-menu">Home</a>
 									</li>
 									<li>
-										<a href="policy.html" class="contains-sub-menu current">Policy</a>
+										<a href="{{url('/policy')}}" class="contains-sub-menu current">Policy</a>
 									</li>
 									<li>
-										<a href="contact.html" class="contains-sub-menu">Contact Us</a>
+										<a href="{{url('/contact')}}" class="contains-sub-menu">Contact Us</a>
 									</li>
 								</ul>
 							</nav>

@@ -35,13 +35,13 @@
 				<nav class="side-navigation">
 					<ul>
 						<li>
-							<a href="index.html" class="contains-sub-menu current">Home</a>
+							<a href="{{url('/')}}" class="contains-sub-menu current">Home</a>
 						</li>
 						<li>
-							<a href="policy.html" class="contains-sub-menu ">Policy</a>
+							<a href="{{url('/policy')}}" class="contains-sub-menu ">Policy</a>
 						</li>
 						<li>
-							<a href="contact.html" class="contains-sub-menu">Contact Us</a>
+							<a href="{{url('/contact')}}" class="contains-sub-menu">Contact Us</a>
 						</li>
 					</ul>
 				</nav>
@@ -75,13 +75,13 @@
 							<nav class="navigation nav-block primary-navigation nav-right">
 								<ul>	
 									<li>
-										<a href="index.html" class="contains-sub-menu current">Home</a>
+										<a href="{{url('/')}}" class="contains-sub-menu current">Home</a>
 									</li>
 									<li>
-										<a href="policy.html" class="contains-sub-menu ">Policy</a>
+										<a href="{{url('/policy')}}" class="contains-sub-menu ">Policy</a>
 									</li>
 									<li>
-										<a href="contact.html" class="contains-sub-menu">Contact Us</a>
+										<a href="{{url('/contact')}}" class="contains-sub-menu">Contact Us</a>
 									</li>
 								</ul>
 							</nav>
@@ -143,11 +143,6 @@
 										</ul>
 									</div>
 								</div>
-								@if(Session::has('message'))
-								<div class="alert alert-success text-center">
-									{{ Session::get('message') }}
-								</div>
-									@endif
 								<form method="get" action="{{url('/form')}}">
 									@csrf
 								<div class="product-cart">

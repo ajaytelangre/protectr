@@ -8,7 +8,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="Your-Image-Url" />
 	<meta property="og:description" content="Your-Page-Description" />
-	<title>Sartre | Multipurpose HTML5 Template - Checkout</title>
+	<title>Protectr</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/theme-mountain-favicon.ico">
 
 	<!-- Font -->
@@ -58,13 +58,13 @@
 				<nav class="side-navigation nav-block">
 					<ul>
 						<li>
-							<a href="index.html" class="contains-sub-menu">Home</a>
+							<a href="{{url('/')}}" class="contains-sub-menu">Home</a>
 						</li>
 						<li>
-							<a href="policy.html" class="contains-sub-menu ">Policy</a>
+							<a href="{{url('/policy')}}" class="contains-sub-menu ">Policy</a>
 						</li>
 						<li>
-							<a href="contact.html" class="contains-sub-menu">Contact Us</a>
+							<a href="{{url('/contact')}}" class="contains-sub-menu">Contact Us</a>
 						</li>
 					</ul>
 				</nav>
@@ -94,13 +94,13 @@
 							<nav class="navigation nav-block primary-navigation nav-right">
 								<ul>
 									<li>
-										<a href="index.html" class="contains-sub-menu">Home</a>
+										<a href="{{url('/')}}" class="contains-sub-menu">Home</a>
 									</li>
 									<li>
-										<a href="policy.html" class="contains-sub-menu ">Policy</a>
+										<a href="{{url('/policy')}}" class="contains-sub-menu ">Policy</a>
 									</li>
 									<li>
-										<a href="contact.html" class="contains-sub-menu">Contact Us</a>
+										<a href="{{url('/contact')}}" class="contains-sub-menu">Contact Us</a>
 									</li>
 								</ul>
 							</nav>
