@@ -15,7 +15,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('product');
+    return view('front');
 });
 
 Route::get('/product', function () {
